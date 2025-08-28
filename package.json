@@ -1,0 +1,22 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "vanilla js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdbcoder/vanilla.git"
+  },
+  "keywords": [
+    "vanilla"
+  ],
+  "author": "doniyor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdbcoder/vanilla/issues"
+  },
+  "homepage": "https://github.com/mdbcoder/vanilla#readme"
+}
