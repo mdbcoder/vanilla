@@ -8,12 +8,19 @@
     <link rel="stylesheet" href="/src/styles/index.css" />
   </head>
   <body>
+    <!-- Header Partial -->
+    <div data-include="/partials/header.html"></div>
+
     <main id="app">
       <h1>Salom, Vanilla JS!</h1>
       <button id="btn">0</button>
     </main>
 
+    <!-- Footer Partial -->
+    <div data-include="/partials/footer.html"></div>
+
     <!-- ES Modules -->
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/include.js"></script>
   </body>
 </html>
