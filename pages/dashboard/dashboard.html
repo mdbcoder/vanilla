@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRM Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Xodimlar Ma'lumotlari</h1>
+    <ul id="employeeList"></ul>
+    <button onclick="logout()">Chiqish</button>
+
+    <!-- Header Partial -->
+    <div data-include="/layout/header.html"></div>
+
+    <main id="app">
+      <h1>Salom, Vanilla JS!</h1>
+      <button id="btn">0</button>
+    </main>
+
+    <!-- Footer Partial -->
+    <div data-include="/layout/footer.html"></div>
+
+    <!-- ES Modules -->
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/include.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      // Sahifa yuklanganda login ni tekshir
+      checkLogin();
+
+      // Xodimlar ma'lumotlarini yukla va ko'rsat
+      const employees = JSON.parse(localStorage.getItem("employees")) || [];
+      const list = document.getElementById("employeeList");
+      employees.forEach((emp) => {
+        const li = document.createElement("li");
+        li.textContent = `${emp.name} - ${emp.position} (${emp.email})`;
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
