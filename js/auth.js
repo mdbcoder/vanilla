@@ -1,8 +1,13 @@
-import { AUTHORIZATION, CURRENT_USER, USERS_LOGIN } from "../utils/const.js";
+import {
+  AUTHORIZATION,
+  CURRENT_USER,
+  WOORKROOM,
+  USERS_LOGIN,
+} from "../utils/const.js";
 import { $ } from "../utils/dom.js";
 
 // Dastlabki setup: users bo'lmasa, yarat
-if (!localStorage.getItem(USERS_LOGIN)) {
+if (!localStorage.getItem(WOORKROOM)) {
   const users = [
     {
       rememberMe: false,
@@ -21,18 +26,21 @@ if (!localStorage.getItem(USERS_LOGIN)) {
       },
     }, // Dastlabki user
   ];
-  localStorage.setItem(USERS_LOGIN, JSON.stringify(users));
+  localStorage.setItem(WOORKROOM, JSON.stringify({ [USERS_LOGIN]: users }));
 }
 
 // Local storage dan users ni olish
 function getUsers() {
-  return JSON.parse(localStorage.getItem(USERS_LOGIN)) || [];
+  return (
+    (JSON.parse(localStorage.getItem(WOORKROOM)) || {})?.[USERS_LOGIN] || []
+  );
 }
 
 // Login funksiyasi
 function login() {
   const email = $("#email").value;
   const password = $("#password").value;
+  const remember = $("#remember-me").checked;
   const error = $("#error");
 
   const users = getUsers();

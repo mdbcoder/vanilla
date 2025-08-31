@@ -4,7 +4,7 @@ class CustomButton extends HTMLElement {
 
     const label = this.getAttribute("label") || "Button";
     const onclick = this.getAttribute("onclick") || "";
-    const className = this.getAttribute("class") || "";
+    const className = this.getAttribute("className") || "";
     const id = this.getAttribute("id") || "";
     const type = this.getAttribute("type") || "button";
 

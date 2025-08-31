@@ -4,31 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link rel="stylesheet" href="./assets/styles/pages/login.css" />
     <script type="module" src="./components/input-component.js"></script>
     <script type="module" src="./components/select-component.js"></script>
     <script type="module" src="./components/button-component.js"></script>
     <script type="module" src="./js/auth.js"></script>
   </head>
   <body>
-    <h1>CRM Tizimiga Kirish</h1>
-    <form id="loginForm">
-      <custom-input
-        label="Username"
-        type="email"
-        placeholder="Enter username"
-        id="email"
-        required
-      ></custom-input>
-      <custom-input
-        label="Parol"
-        type="password"
-        placeholder="Enter password"
-        id="password"
-        required
-      ></custom-input>
-      <custom-button label="Kirish" type="submit"></custom-button>
-    </form>
-    <p id="error" style="color: red"></p>
+    <div class="login--container">
+      <div class="login_left">
+        <div class="left--width">
+          <div class="left_logo">
+            <img src="./assets/images/logo.png" alt="logo" />
+            <h2>Woorkroom</h2>
+          </div>
+          <h4 class="left_text">Your place to work Plan. Create. Control.</h4>
+          <img class="left_img" src="./assets/images/login.png" alt="login" />
+        </div>
+      </div>
+      <div class="login_right">
+        <h1>Sign In to Woorkroom</h1>
+        <form id="loginForm" class="login_form">
+          <custom-input
+            label="Username"
+            type="email"
+            placeholder="youremail@gmail.com"
+            input-id="email"
+            class="input__wrapper"
+            className="input__container"
+            classNameLabel="input__label"
+            classNameInput="input__field"
+            required
+          ></custom-input>
+          <div class="password--wrapper">
+            <custom-input
+              label="Parol"
+              type="password"
+              placeholder="******"
+              input-id="password"
+              class="input__wrapper"
+              className="input__container"
+              classNameLabel="input__label"
+              classNameInput="input__field"
+              required
+            ></custom-input>
+            <button class="password--btn" type="button" id="togglePassword">
+              <img src="./assets/icons/eye.svg" alt="input show icon" />
+            </button>
+          </div>
+          <div class="options--wrapper">
+            <custom-input
+              label="Remember me"
+              type="checkbox"
+              input-id="remember-me"
+              className="checkbox__container"
+              classNameLabel="checkbox__label"
+              classNameInput="checkbox__field"
+            ></custom-input>
+            <a href="#" class="forgot--link">Forgot Password?</a>
+          </div>
+          <custom-button
+            className="primary--button py-10"
+            label="Sign In <img src='./assets/icons/arrow.svg' alt='button arrow icon' />"
+            type="submit"
+          ></custom-button>
+        </form>
+        <custom-button
+          className="link--button"
+          label="Don’t have an account?"
+          type="button"
+          onclick="location.href='register.html'"
+        ></custom-button>
+        <p id="error" style="color: red"></p>
+      </div>
+    </div>
+
+    <script type="module" src="./js/pages/login.js"></script>
   </body>
 </html>

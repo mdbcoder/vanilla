@@ -1,0 +1,10 @@
+@import "./atoms/input.css";
+@import "./atoms/checkbox.css";
+@import "./atoms/button.css";
+@import "./atoms/link.css";
+
+/* padding */
+.py-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}

@@ -1,0 +1,41 @@
+/* button primary */
+.primary--button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.125rem;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  border-radius: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 7px 11px -7px color-mix(in srgb, var(--primary) 30%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.primary--button:hover {
+  opacity: 0.9;
+}
+/* button link */
+.link--button {
+  background-color: transparent;
+  color: var(--primary);
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 0.0625rem 0;
+  border-bottom: 2px solid transparent;
+}
+.link--button:hover {
+  border-color: var(--primary);
+}

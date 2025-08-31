@@ -5,14 +5,17 @@ class CustomInput extends HTMLElement {
     const label = this.getAttribute("label") || "Label";
     const type = this.getAttribute("type") || "text";
     const placeholder = this.getAttribute("placeholder") || "";
-    const className = this.getAttribute("class") || "";
-    const id = this.getAttribute("id") || "";
+    const className = this.getAttribute("className") || "";
+    const classNameLabel = this.getAttribute("classNameLabel") || "";
+    const classNameInput = this.getAttribute("classNameInput") || "";
+    const inputId =
+      this.getAttribute("input-id") || `inp-${crypto.randomUUID()}`;
     const required = this.hasAttribute("required") ? "required" : "";
 
     this.innerHTML = `
       <div class="${className}">
-        <label for="${id}" >${label}</label>
-        <input id="${id}" type="${type}" placeholder="${placeholder}" ${required} />
+        <label class="${classNameLabel}" for="${inputId}">${label}</label>
+        <input class="${classNameInput}" id="${inputId}" type="${type}" placeholder="${placeholder}" ${required} />
       </div>
     `;
   }

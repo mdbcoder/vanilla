@@ -1,0 +1,14 @@
+/* link */
+.forgot--link {
+  background-color: transparent;
+  color: var(--gray);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.forgot--link:hover {
+  color: var(--primary);
+}
