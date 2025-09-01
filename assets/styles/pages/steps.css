@@ -1,0 +1,14 @@
+@import "../layout/step-bar.css";
+
+.step--wrapper {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  height: 100vh;
+  min-height: 48rem;
+}
+.step_right {
+  flex: 1;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+}

@@ -8,4 +8,5 @@ togglePassword.addEventListener("click", function () {
       ? "text"
       : "password";
   passwordInput?.input?.setAttribute("type", type);
+  this.classList.toggle("show-password");
 });

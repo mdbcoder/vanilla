@@ -1,3 +1,4 @@
+import { showToast } from "../components/toast-component.js";
 import {
   AUTHORIZATION,
   CURRENT_USER,
@@ -41,8 +42,8 @@ function login() {
   const email = $("#email").value;
   const password = $("#password").value;
   const remember = $("#remember-me").checked;
-  const error = $("#error");
-
+  // back end ga yuborish uchun remember
+  console.log(remember);
   const users = getUsers();
   const user = users.find(
     (u) => u?.signin?.email === email && u?.signin?.password === password
@@ -50,10 +51,10 @@ function login() {
 
   if (user) {
     localStorage.setItem(AUTHORIZATION, "true"); // Login holatini saqlash
-    localStorage.setItem(CURRENT_USER, email); // Joriy foydalanuvchi
-    window.location.href = "dashboard.html"; // Dashboard ga o'tish
+    localStorage.setItem(CURRENT_USER, email); // Joriy foydalanuvchi emailini saqlash
+    window.location.href = "pages/dashboard/dashboard.html"; // Dashboard ga o'tish
   } else {
-    error.textContent = "Email yoki parol xato!";
+    showToast("Email or password incorrect!", "error", 4000);
   }
 }
 
@@ -63,10 +64,22 @@ function checkLogin() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
   if (!loggedIn && currentPage !== "index.html") {
-    window.location.href = "index.html";
-  } else if (loggedIn && currentPage === "index.html") {
-    window.location.href = "dashboard.html";
+    window.location.href = "/index.html";
+  } else if (loggedIn && currentPage === "/index.html") {
+    window.location.href = "/pages/dashboard/dashboard.html";
   }
+}
+
+// logout funksiyasi
+function logout() {
+  localStorage.removeItem(AUTHORIZATION);
+  localStorage.removeItem(CURRENT_USER);
+  window.location.href = "../../index.html"; // Bosh sahifaga qaytish
+}
+
+const logoutBtn = $("#log-out");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", logout);
 }
 
 // DOM yuklanganda ishga tushirish

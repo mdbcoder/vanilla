@@ -3,12 +3,14 @@
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
   min-height: 42rem;
+  padding: 1.5rem;
 }
 .login_left {
   background-color: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1.5rem 0 0 1.5rem;
 }
 .left--width {
   width: 100%;
@@ -32,6 +34,7 @@
   object-fit: cover;
 }
 .left_logo h2 {
+  margin-top: 1rem;
   color: var(--white);
   font-size: var(--font-size-3xl);
   font-weight: 700;
@@ -52,6 +55,8 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background-color: var(--white);
+  border-radius: 0 1.5rem 1.5rem 0;
 }
 .login_right h1 {
   font-size: var(--font-size-2xl);
@@ -80,10 +85,13 @@
   cursor: pointer;
   z-index: 10;
 }
-
 .options--wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.show-password img {
+  filter: invert(39%) sepia(83%) saturate(749%) hue-rotate(169deg)
+    brightness(91%) contrast(85%);
 }

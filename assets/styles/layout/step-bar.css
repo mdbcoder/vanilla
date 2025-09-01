@@ -1,0 +1,88 @@
+.step_left {
+  width: 22rem;
+  background-color: var(--primary);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+.step_left img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.step_left h2 {
+  margin-top: 2.5rem;
+  color: var(--white);
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+}
+
+.step_left .steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step_left .steps li {
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step_left li span {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step_left li span::after {
+  content: "";
+  position: absolute;
+  bottom: -1.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.125rem;
+  height: 1.5rem;
+  border-radius: 0.125rem;
+  background-color: var(--white);
+}
+
+.step_left li:last-child span::after {
+  display: none;
+}
+
+.step_left .steps_done span {
+  background-color: var(--white);
+}
+
+.step_left .steps_active span {
+  background-color: color-mix(in srgb, var(--white) 30%, transparent);
+}
+
+.step_left li.steps_disabled {
+  opacity: 0.6;
+}
+
+.step_left .steps img {
+  width: 12px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0;
+}
+.step_left .steps li.steps_done img {
+  opacity: 1;
+}
