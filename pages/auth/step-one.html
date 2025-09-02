@@ -8,13 +8,55 @@
     <link rel="stylesheet" href="../../assets/styles/pages/steps.css" />
     <script type="module" src="../../js/include.js"></script>
     <script type="module" src="../../js/pages/steps.js"></script>
+    <script type="module" src="../../components/input-component.js"></script>
+    <script type="module" src="../../components/select-component.js"></script>
+    <script type="module" src="../../components/button-component.js"></script>
   </head>
   <body>
     <div class="step--wrapper">
       <div data-include="/layout/step-bar.html"></div>
 
       <div class="step_right">
-        <h1>Valid your phone</h1>
+        <div class="rigth_form">
+          <p>Step 1/4</p>
+          <h5>Valid your phone</h5>
+          <form id="loginForm" class="login_form">
+            <custom-input
+              label="Username"
+              type="email"
+              placeholder="youremail@gmail.com"
+              input-id="email"
+              class="input__wrapper"
+              className="input__container"
+              classNameLabel="input__label"
+              classNameInput="input__field"
+              required
+            ></custom-input>
+            <div class="password--wrapper">
+              <custom-input
+                label="Parol"
+                type="password"
+                placeholder="******"
+                input-id="password"
+                class="input__wrapper"
+                className="input__container"
+                classNameLabel="input__label"
+                classNameInput="input__field"
+                required
+              ></custom-input>
+              <button class="password--btn" type="button" id="togglePassword">
+                <img src="../../assets/icons/eye.svg" alt="input show icon" />
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="rigth_bottom">
+          <custom-button
+            className="primary--button py-10"
+            label="Next Step <img src='../../assets/icons/arrow.svg' alt='button arrow icon' />"
+            type="submit"
+          ></custom-button>
+        </div>
       </div>
     </div>
   </body>

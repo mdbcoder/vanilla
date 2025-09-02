@@ -71,27 +71,4 @@
   align-items: center;
   justify-content: center;
 }
-.password--wrapper {
-  width: 100%;
-  position: relative;
-}
-.password--btn {
-  position: absolute;
-  top: 2.3125rem;
-  right: 0.8rem;
-  background: var(--white);
-  padding: 0 0.5rem;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-}
-.options--wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.show-password img {
-  filter: invert(39%) sepia(83%) saturate(749%) hue-rotate(169deg)
-    brightness(91%) contrast(85%);
-}
+
