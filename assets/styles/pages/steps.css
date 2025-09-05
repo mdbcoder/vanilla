@@ -1,4 +1,5 @@
 @import "../layout/step-bar.css";
+@import "./login.css";
 
 .step--wrapper {
   display: flex;
