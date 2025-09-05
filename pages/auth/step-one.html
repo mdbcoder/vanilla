@@ -11,15 +11,17 @@
     <script type="module" src="../../components/button-component.js"></script>
     <script type="module" src="../../js/include.js"></script>
     <script type="module" src="../../js/pages/steps.js"></script>
+    <script type="module" src="../../components/input-component.js"></script>
+    <script type="module" src="../../components/select-component.js"></script>
+    <script type="module" src="../../components/button-component.js"></script>
   </head>
   <body>
     <div class="step--wrapper">
       <div data-include="/layout/step-bar.html"></div>
       <div class="step_right">
-        <p>Step 1/4</p>
-        <h2>Valid your phone</h2>
-        <div class="login_right">
-          <h1>Sign In to Woorkroom</h1>
+        <div class="rigth_form">
+          <p>Step 1/4</p>
+          <h5>Valid your phone</h5>
           <form id="loginForm" class="login_form">
             <custom-input
               label="Username"
@@ -45,7 +47,7 @@
                 required
               ></custom-input>
               <button class="password--btn" type="button" id="togglePassword">
-                <img src="./assets/icons/eye.svg" alt="input show icon" />
+                <img src="../../assets/icons/eye.svg" alt="input show icon" />
               </button>
             </div>
             <div class="options--wrapper">
@@ -61,7 +63,7 @@
             </div>
             <custom-button
               className="primary--button py-10"
-              label="Sign In <img src='./assets/icons/arrow.svg' alt='button arrow icon' />"
+              label="Sign In <img src='../../assets/icons/arrow.svg' alt='button arrow icon' />"
               type="submit"
             ></custom-button>
           </form>
@@ -71,6 +73,14 @@
             type="button"
             onclick="location.href='pages/auth/step-one.html'"
           ></custom-button>
+        </div>
+        <div class="rigth_bottom">
+          <custom-button
+            className="primary--button py-10"
+            label="Next Step <img src='../../assets/icons/arrow.svg' alt='button arrow icon' />"
+            type="submit"
+          >
+          </custom-button>
         </div>
       </div>
     </div>
